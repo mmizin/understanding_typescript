@@ -11,7 +11,7 @@ abstract class RestAPI {
         return expectedFailure ? await response.text() : await response.json();
     }
 
-    ?post(url: string, expectedFailure = false): Promise<Record<string, unknown> | string> {
+    post(url: string, expectedFailure = false): Promise<Record<string, unknown> | string> {
         return this.get(url, expectedFailure);
     }   
 
